@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilih Dokter</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="../img/icons.ico" type="image/x-icon" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="crossorigin"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <style>
+      * {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .card-layanan {
+        border: 2px solid #150050;
+      }
+      .konsultasi .card-konsultasi {
+        border: 2px solid #150050;
+      }
+      .nav-desktop .link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0px;
+        height: 2px;
+        background: #fff;
+        transition: ease 1s;
+      }
+      .nav-desktop .link:hover::after {
+        width: 100%;
+      }
+      .links .link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background: #150050;
+        transition: ease 1s;
+      }
+      .links .link:hover::after {
+        width: 100%;
+      }
+      .nav-mobile {
+        transition: ease 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="bg-image h-screen bg-center bg-no-repeat bg-cover md:bg-left"
+      style="background-image: url(../img/heropanggildokter.png)"
+    >
+      <!-- Navbar -->
+      <nav
+        class="nav-desktop fixed w-full h-24 bg-black bg-opacity-50 flex items-center px-4 justify-between md:px-10 lg:px-20 xl:px-24 2xl:px-36 z-50 backdrop-blur"
+        id="nav"
+      >
+        <a
+          href="../index.html"
+          class="heading font-bold text-2xl text-white md:text-4xl xl:text-4xl"
+          >TechnoHealth</a
+        >
+        <ul class="hidden xl:flex text-white">
+          <li class="mr-12 font-medium text-xl relative">
+            <a href="../index.html#hero" class="link">Beranda</a>
+          </li>
+          <li class="mr-12 font-medium text-xl relative">
+            <a href="../index.html#tentang-kami" class="link">Tentang Kami</a>
+          </li>
+          <li class="mr-12 font-medium text-xl relative">
+            <a href="../index.html#layanan" class="link">Layanan</a>
+          </li>
+          <li class="mr-12 font-medium text-xl">
+            <a class="py-2 px-6 bg-white text-black" href="daftar.html"
+              >Daftar</a
+            >
+          </li>
+          <li class="mr-12 font-medium text-xl">
+            <a class="py-2 px-6 border-2" href="#">Masuk</a>
+          </li>
+        </ul>
+        <button class="xl:hidden">
+          <i class="bx bx-menu text-3xl text-white md:text-4xl xl:hidden"></i>
+        </button>
+      </nav>
+      <nav
+        class="nav-mobile -mr-[100%] z-50 right-0 top-[96px] text-center w-screen h-screen shadow-xl text-white xl:hidden bg-black bg-opacity-50 fixed backdrop-blur md:text-xl"
+      >
+        <ul class="block">
+          <li class="my-6 hover:text-[#1400FF]">
+            <a href="../index.html#hero">Beranda</a>
+          </li>
+          <li class="my-6 hover:text-[#1400FF]">
+            <a href="../index.html#tentang-kami">Tentang Kami</a>
+          </li>
+          <li class="my-6 hover:text-[#1400FF]">
+            <a href="../index.html#layanan">Layanan</a>
+          </li>
+          <li class="my-6 hover:text-[#1400FF]">
+            <a href="daftar.html">Daftar</a>
+          </li>
+          <li class="my-6 hover:text-[#1400FF]">
+            <a href="#">Masuk</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Akhir Navbar -->
+      <!-- Hero -->
+      <section
+        class="hero px-4 flex flex-col justify-center h-full md:px-10 lg:px-20 xl:px-36"
+        id="hero"
+      >
+        <h1
+          class="heading font-bold text-white text-2xl w-[300px] md:text-5xl md:w-[700px]"
+        >
+          Panggil dokter ke rumah
+        </h1>
+        <p
+          class="description mt-3 w-[320px] font-medium text-white text-justify md:w-[625px] md:text-2xl"
+        >
+          Anda bisa memanggil dokter ke rumah anda. Dengan harga yang terjangkau
+          dan pastinya terpercaya.
+        </p>
+        <a
+          href="#pilih-dokter"
+          class="w-44 rounded-lg bg-white py-2 px-2 text-center text-xs font-semibold mt-4 lg:w-[280px] lg:py-2 lg:text-base"
+          >Konsultasi Sekarang</a
+        >
+      </section>
+      <!-- Akhir Hero -->
+    </div>
+    <!-- Pilih Dokter -->
+    <section
+      class="pilih-dokter px-5 py-44 md:px-10 lg:px-20 xl:px-36"
+      id="pilih-dokter"
+    >
+      <div class="text">
+        <h1 class="heading text-2xl font-bold text-[#150050] md:text-5xl">
+          Pilih Dokter
+        </h1>
+        <p
+          class="description text-sm font-medium mt-4 mb-8 text-[#150050] md:text-lg md:w-[606px] md:font-semibold"
+        >
+          Tak perlu khawatir, disini semua dokter sudah berpengalaman dan
+          pastinya terpercaya. Jadi tunggu apa lagi, konsultasikan kesehatanmu
+          sekarang.
+        </p>
+      </div>
+      <div class="links flex text-[#150050] items-center justify-between">
+        <h1 class="font-bold text-lg md:text-2xl">Rekomendasi</h1>
+        <ul class="links text-sm font-semibold md:text-lg flex">
+          <li class="mr-4 relative"><a href="#" class="link">Dr. Mata</a></li>
+          <li class="mr-4 relative"><a href="#" class="link">Dr. Gigi</a></li>
+          <li class="relative"><a href="#" class="link">Dr. Gizi</a></li>
+        </ul>
+      </div>
+      <div class="card my-12 flex justify-center flex-wrap md:justify-between">
+        <div
+          class="card-dokter flex my-3 w-[332px] h-[140px] xl:w-[500px] xl:h-[160px]"
+        >
+          <div class="image">
+            <img src="../img/doker-satu.png" alt="" />
+          </div>
+          <div class="description pl-6">
+            <h1 class="name font-semibold text-[#150050] text-2xl">
+              Afif Ihsan Maulana
+            </h1>
+            <p class="specialis font-semibold text-[#150050] mx-4 mt-1 mb-4">
+              Dokter Gigi
+            </p>
+            <div class="experience flex my-5">
+              <div class="years font-medium text-xs flex items-center mx-4">
+                <iconify-icon icon="maki:suitcase"></iconify-icon>
+                <p class="ml-2">10 tahun</p>
+              </div>
+              <div class="rating font-medium text-xs flex items-center">
+                <iconify-icon icon="material-symbols:thumb-up"></iconify-icon>
+                <p class="ml-2">100%</p>
+              </div>
+            </div>
+            <a
+              href="detaildokter.html"
+              class="font-semibold text-sm bg-[#150050] text-white px-4 py-1 rounded"
+              >Buat Janji</a
+            >
+          </div>
+        </div>
+        <div
+          href="#"
+          class="card-dokter flex my-3 w-[332px] h-[140px] xl:w-[500px] xl:h-[160px]"
+        >
+          <div class="image">
+            <img src="../img/dokter-dua.png" alt="" />
+          </div>
+          <div class="description pl-6">
+            <h1 class="name font-semibold text-[#150050] text-2xl">
+              Ardian Yusuf M
+            </h1>
+            <p class="specialis font-semibold text-[#150050] mx-4 mt-1 mb-4">
+              Dokter Gigi
+            </p>
+            <div class="experience flex my-5">
+              <div class="years font-medium text-xs flex items-center mx-4">
+                <iconify-icon icon="maki:suitcase"></iconify-icon>
+                <p class="ml-2">10 tahun</p>
+              </div>
+              <div class="rating font-medium text-xs flex items-center">
+                <iconify-icon icon="material-symbols:thumb-up"></iconify-icon>
+                <p class="ml-2">100%</p>
+              </div>
+            </div>
+            <a
+              href="detaildokter.html"
+              class="font-semibold text-sm bg-[#150050] text-white px-4 py-1 rounded"
+              >Buat Janji</a
+            >
+          </div>
+        </div>
+        <div
+          href="#"
+          class="card-dokter flex my-3 w-[332px] h-[140px] xl:w-[500px] xl:h-[160px]"
+        >
+          <div class="image">
+            <img src="../img/dokter-tiga.png" alt="" />
+          </div>
+          <div class="description pl-6">
+            <h1 class="name font-semibold text-[#150050] text-2xl">
+              Rifti Ayu D
+            </h1>
+            <p class="specialis font-semibold text-[#150050] mx-4 mt-1 mb-4">
+              Dokter Gigi
+            </p>
+            <div class="experience flex my-5">
+              <div class="years font-medium text-xs flex items-center mx-4">
+                <iconify-icon icon="maki:suitcase"></iconify-icon>
+                <p class="ml-2">10 tahun</p>
+              </div>
+              <div class="rating font-medium text-xs flex items-center">
+                <iconify-icon icon="material-symbols:thumb-up"></iconify-icon>
+                <p class="ml-2">100%</p>
+              </div>
+            </div>
+            <a
+              href="detaildokter.html"
+              class="font-semibold text-sm bg-[#150050] text-white px-4 py-1 rounded"
+              >Buat Janji</a
+            >
+          </div>
+        </div>
+        <div
+          href="#"
+          class="card-dokter flex my-3 w-[332px] h-[140px] xl:w-[500px] xl:h-[160px]"
+        >
+          <div class="image">
+            <img src="../img/dokter-empat.png" alt="" />
+          </div>
+          <div class="description pl-6">
+            <h1 class="name font-semibold text-[#150050] text-2xl">
+              Ferdyan Steevandio
+            </h1>
+            <p class="specialis font-semibold text-[#150050] mx-4 mt-1 mb-4">
+              Dokter Gigi
+            </p>
+            <div class="experience flex my-5">
+              <div class="years font-medium text-xs flex items-center mx-4">
+                <iconify-icon icon="maki:suitcase"></iconify-icon>
+                <p class="ml-2">10 tahun</p>
+              </div>
+              <div class="rating font-medium text-xs flex items-center">
+                <iconify-icon icon="material-symbols:thumb-up"></iconify-icon>
+                <p class="ml-2">100%</p>
+              </div>
+            </div>
+            <a
+              href="detaildokter.html"
+              class="font-semibold text-sm bg-[#150050] text-white px-4 py-1 rounded"
+              >Buat Janji</a
+            >
+          </div>
+        </div>
+        <div
+          href="#"
+          class="card-dokter flex my-3 w-[332px] h-[140px] xl:w-[500px] xl:h-[160px]"
+        >
+          <div class="image">
+            <img src="../img/dokter-lima.png" alt="" />
+          </div>
+          <div class="description pl-6">
+            <h1 class="name font-semibold text-[#150050] text-2xl">
+              Yordan Aserama L
+            </h1>
+            <p class="specialis font-semibold text-[#150050] mx-4 mt-1 mb-4">
+              Dokter Gigi
+            </p>
+            <div class="experience flex my-5">
+              <div class="years font-medium text-xs flex items-center mx-4">
+                <iconify-icon icon="maki:suitcase"></iconify-icon>
+                <p class="ml-2">10 tahun</p>
+              </div>
+              <div class="rating font-medium text-xs flex items-center">
+                <iconify-icon icon="material-symbols:thumb-up"></iconify-icon>
+                <p class="ml-2">100%</p>
+              </div>
+            </div>
+            <a
+              href="detaildokter.html"
+              class="font-semibold text-sm bg-[#150050] text-white px-4 py-1 rounded"
+              >Buat Janji</a
+            >
+          </div>
+        </div>
+        <div
+          href="#"
+          class="card-dokter flex my-3 w-[332px] h-[140px] xl:w-[500px] xl:h-[160px]"
+        >
+          <div class="image">
+            <img src="../img/dokter-enam.png" alt="" />
+          </div>
+          <div class="description pl-6">
+            <h1 class="name font-semibold text-[#150050] text-2xl">
+              Luna Martha V
+            </h1>
+            <p class="specialis font-semibold text-[#150050] mx-4 mt-1 mb-4">
+              Dokter Gigi
+            </p>
+            <div class="experience flex my-5">
+              <div class="years font-medium text-xs flex items-center mx-4">
+                <iconify-icon icon="maki:suitcase"></iconify-icon>
+                <p class="ml-2">10 tahun</p>
+              </div>
+              <div class="rating font-medium text-xs flex items-center">
+                <iconify-icon icon="material-symbols:thumb-up"></iconify-icon>
+                <p class="ml-2">100%</p>
+              </div>
+            </div>
+            <a
+              href="detaildokter.html"
+              class="font-semibold text-sm bg-[#150050] text-white px-4 py-1 rounded"
+              >Buat Janji</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="button-more">
+        <a
+          href="#"
+          class="bg-[#150050] text-white px-6 py-2 rounded-md font-semibold"
+          >Lebih Banyak</a
+        >
+      </div>
+    </section>
+    <!-- Akhir Pilih Dokter -->
+    <!-- Footer -->
+    <footer
+      class="footer w-full bg-[#040613] text-white flex flex-wrap justify-center py-16 px-5 lg:justify-between lg:px-36"
+      id="footer"
+    >
+      <div class="technohealth w-80 md:py-6 lg:w-80">
+        <img src="../img/Logo.png" alt="" />
+        <p class="text-sm my-7">
+          TechnoHealth adalah website yang dapat membantu anda mengenai masalah
+          kesehatan
+        </p>
+        <div class="sosmed text-[#1400FF] text-2xl">
+          <a href="#" class="mr-3">
+            <iconify-icon icon="ri:instagram-fill"></iconify-icon>
+          </a>
+          <a href="#" class="mr-3">
+            <iconify-icon icon="bi:twitter"></iconify-icon>
+          </a>
+          <a href="#" class="mr-3">
+            <iconify-icon icon="uil:facebook-f"></iconify-icon>
+          </a>
+          <a href="#" class="mr-3">
+            <iconify-icon icon="ion:logo-tiktok"></iconify-icon>
+          </a>
+        </div>
+      </div>
+      <div
+        class="services w-24 py-6 md:w-1/2 md:text-center lg:w-[88px] lg:text-left"
+      >
+        <p class="my-3 font-bold text-[#1400FF] text-lg">Services</p>
+        <ul>
+          <li class="mb-2">
+            <a href="konsultasi.html">Konsultansi</a>
+          </li>
+          <li class="mb-2">
+            <a href="cariobat.html">Cari Obat</a>
+          </li>
+          <li class="mb-2">
+            <a href="maps.html">Maps</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#artikel">Artikel</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Donasi</a>
+          </li>
+        </ul>
+      </div>
+      <div class="links py-6 md:w-1/2 md:text-center lg:w-[128px] lg:text-left">
+        <h1 class="my-3 font-bold text-[#1400FF] text-lg">Usefull Link</h1>
+        <ul>
+          <li class="mb-2">
+            <a href="../index.html#hero">Beranda</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#tentang-kami">Tentang Kami</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#layanan">Layanan</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Kontak</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Kebijakan Privasi</a>
+          </li>
+        </ul>
+      </div>
+      <div class="kontak w-80 py-6">
+        <h1 class="font-bold text-[#1400FF] text-lg my-3">Contact</h1>
+        <p class="opacity-60 text-lg font-medium mb-3">(62) 123 4567 8901</p>
+        <p class="opacity-60 text-lg font-medium mb-10">technoai@gmail.com</p>
+        <input
+          type="text"
+          name="kontak"
+          id="kontak"
+          class="w-[169px] h-10 px-2"
+          placeholder="Isi"
+        />
+        <button type="submit" class="bg-[#3FA0FB] w-16 h-10 text-lg">
+          <iconify-icon icon="material-symbols:arrow-right-alt"></iconify-icon>
+        </button>
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <!-- Js -->
+    <script src="../script.js"></script>
+
+    <!-- Icon -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  </body>
+</html>

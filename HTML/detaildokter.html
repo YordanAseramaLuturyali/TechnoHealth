@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Jojo</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="../img/icons.ico" type="image/x-icon" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="crossorigin"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <style>
+      * {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .card {
+        border: 2px solid #150050;
+      }
+      .input {
+        border: 2px solid #150050;
+      }
+      .detail-dokter {
+        border: 2px solid #150050;
+      }
+      .form-daftar input {
+        border: 2px solid #150050;
+      }
+      .form-daftar textarea {
+        border: 2px solid #150050;
+        resize: none;
+      }
+      .nav-desktop .link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0px;
+        height: 2px;
+        background: #fff;
+        transition: ease 1s;
+      }
+      .nav-desktop .link:hover::after {
+        width: 100%;
+      }
+      .nav-mobile {
+        transition: ease 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="nav-desktop fixed w-full h-24 bg-[#040613] flex items-center px-4 justify-between md:px-10 lg:px-20 xl:px-24 2xl:px-36 z-50"
+      id="nav"
+    >
+      <a
+        href="#"
+        class="heading font-bold text-2xl text-white md:text-4xl xl:text-4xl"
+        >TechnoHealth</a
+      >
+      <ul class="hidden xl:flex text-white">
+        <li class="mr-12 font-medium text-xl relative">
+          <a href="#hero" class="link">Beranda</a>
+        </li>
+        <li class="mr-12 font-medium text-xl relative">
+          <a href="#tentang-kami" class="link">Tentang Kami</a>
+        </li>
+        <li class="mr-12 font-medium text-xl relative">
+          <a href="#layanan" class="link">Layanan</a>
+        </li>
+        <li class="mr-12 font-medium text-xl">
+          <a class="py-2 px-6 bg-white text-black" href="#">Daftar</a>
+        </li>
+        <li class="mr-12 font-medium text-xl">
+          <a class="py-2 px-6 border-2" href="#">Masuk</a>
+        </li>
+      </ul>
+      <button class="xl:hidden">
+        <i class="bx bx-menu text-3xl text-white md:text-4xl xl:hidden"></i>
+      </button>
+    </nav>
+    <nav
+      class="nav-mobile -mr-[100%] z-50 right-0 top-[96px] text-center w-screen h-screen shadow-xl bg-[#040613] text-white fixed md:text-lg"
+    >
+      <ul class="block">
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="#hero">Beranda</a>
+        </li>
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="#tentang-kami">Tentang Kami</a>
+        </li>
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="#layanan">Layanan</a>
+        </li>
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="#">Daftar</a>
+        </li>
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="#">Masuk</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Akhir Navbar -->
+    <!-- Deatil Dokter -->
+    <section
+      class="detail w-full py-40 flex flex-col lg:flex-row lg:justify-evenly lg:px-32 items-center md:justify-between md:px-10"
+      id="detail"
+    >
+      <div class="detail-dokter w-80 text-[#150050] p-4 sm:h-[580px]">
+        <img src="../img/detaildokter.png" alt="" />
+        <h1 class="nama font-semibold mt-4 mb-2 text-2xl">Jojo Luturyali</h1>
+        <h3 class="specialis text-xl font-semibold mb-6">Dokter Hati</h3>
+        <div class="experience flex justify-around mb-5">
+          <div class="length-of-working flex items-center">
+            <iconify-icon
+              icon="maki:suitcase"
+              class="mr-2 text-sm"
+            ></iconify-icon>
+            <p class="text-sm">12 tahun</p>
+          </div>
+          <div class="rating flex items-center">
+            <iconify-icon
+              icon="ic:round-thumb-up"
+              class="mr-2 text-sm"
+            ></iconify-icon>
+            <p class="text-sm">100%</p>
+          </div>
+          <div class="status flex items-center">
+            <iconify-icon
+              icon="material-symbols:circle"
+              class="mr-2 text-sm text-[#00C914]"
+            ></iconify-icon>
+            <p class="text-sm">online</p>
+          </div>
+        </div>
+        <p class="description font-semibold mb-6">
+          Sehat itu murah, tetapi menjadi mahal ketika sehat telah berubah
+          menjadi sakit.
+        </p>
+        <a
+          href=""
+          class="bg-[#150050] py-3 px-[115px] text-white text-2xl font-bold"
+          >Chat</a
+        >
+      </div>
+      <div class="form-daftar py-28">
+        <form action="" class="flex flex-col">
+          <!-- Nama -->
+          <label for="nama" class="font-semibold text-xl text-[#150050]"
+            >Nama</label
+          >
+          <input
+            type="text"
+            name="nama"
+            id="nama"
+            class="w-80 h-10 my-2 text-lg font-medium px-2 rounded md:w-[484px] lg:my-4"
+          />
+          <!-- Email -->
+          <label for="email" class="font-semibold text-xl text-[#150050]"
+            >Email</label
+          >
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="w-80 h-10 my-2 text-lg font-medium px-2 rounded md:w-[484px] lg:my-4"
+          />
+          <!-- No -->
+          <label for="no" class="font-semibold text-xl text-[#150050]"
+            >No WhatsApp</label
+          >
+          <input
+            type="text"
+            name="no"
+            id="no"
+            class="w-80 my-2 h-10 text-lg font-medium px-2 rounded md:w-[484px] lg:my-4"
+          />
+          <!-- Alamat Rumah -->
+          <label for="alamat" class="font-semibold text-xl text-[#150050]"
+            >Alamat</label
+          >
+          <input
+            type="text"
+            name="alamat"
+            id="alamat"
+            class="w-80 h-10 my-2 text-lg font-medium px-2 rounded md:w-[484px] lg:my-4"
+          />
+          <!-- Pesan -->
+          <label for="pesan" class="font-semibold text-xl text-[#150050]"
+            >Pesan</label
+          >
+          <textarea
+            name="pesan"
+            id="pesan"
+            rows="2"
+            class="my-2 px-2 py-1 rounded"
+          ></textarea>
+          <!-- Submit -->
+          <button
+            type="submit"
+            class="my-2 bg-[#150050] text-white w-[150px] h-[40px] font-bold text-xl rounded-lg lg:w-[174px] lg:h-[50px] lg:my-4"
+          >
+            Kirim
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Akhir Detail Dokter -->
+    <!-- Footer -->
+    <footer
+      class="footer w-full bg-[#040613] text-white flex flex-wrap justify-center py-16 px-5 lg:justify-between lg:px-36"
+      id="footer"
+    >
+      <div class="technohealth w-80 md:py-6 lg:w-80">
+        <img src="../img/Logo.png" alt="" />
+        <p class="text-sm my-7">
+          TechnoHealth adalah website yang dapat membantu anda mengenai masalah
+          kesehatan
+        </p>
+        <div class="sosmed text-[#1400FF] text-2xl">
+          <a href="#" class="mr-3">
+            <iconify-icon icon="ri:instagram-fill"></iconify-icon>
+          </a>
+          <a href="#" class="mr-3">
+            <iconify-icon icon="bi:twitter"></iconify-icon>
+          </a>
+          <a href="#" class="mr-3">
+            <iconify-icon icon="uil:facebook-f"></iconify-icon>
+          </a>
+          <a href="#" class="mr-3">
+            <iconify-icon icon="ion:logo-tiktok"></iconify-icon>
+          </a>
+        </div>
+      </div>
+      <div
+        class="services w-24 py-6 md:w-1/2 md:text-center lg:w-[88px] lg:text-left"
+      >
+        <p class="my-3 font-bold text-[#1400FF] text-lg">Services</p>
+        <ul>
+          <li class="mb-2">
+            <a href="konsultasi.html">Konsultansi</a>
+          </li>
+          <li class="mb-2">
+            <a href="cariobat.html">Cari Obat</a>
+          </li>
+          <li class="mb-2">
+            <a href="maps.html">Maps</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#artikel">Artikel</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Donasi</a>
+          </li>
+        </ul>
+      </div>
+      <div class="links py-6 md:w-1/2 md:text-center lg:w-[128px] lg:text-left">
+        <h1 class="my-3 font-bold text-[#1400FF] text-lg">Usefull Link</h1>
+        <ul>
+          <li class="mb-2">
+            <a href="../index.html#hero">Beranda</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#tentang-kami">Tentang Kami</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#layanan">Layanan</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Kontak</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Kebijakan Privasi</a>
+          </li>
+        </ul>
+      </div>
+      <div class="kontak w-80 py-6">
+        <h1 class="font-bold text-[#1400FF] text-lg my-3">Contact</h1>
+        <p class="opacity-60 text-lg font-medium mb-3">(62) 123 4567 8901</p>
+        <p class="opacity-60 text-lg font-medium mb-10">technoai@gmail.com</p>
+        <input
+          type="text"
+          name="kontak"
+          id="kontak"
+          class="w-[169px] h-10 px-2"
+          placeholder="Isi"
+        />
+        <button type="submit" class="bg-[#3FA0FB] w-16 h-10 text-lg">
+          <iconify-icon icon="material-symbols:arrow-right-alt"></iconify-icon>
+        </button>
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <!-- Js -->
+    <script src="../script.js"></script>
+
+    <!-- Icon -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  </body>
+</html>

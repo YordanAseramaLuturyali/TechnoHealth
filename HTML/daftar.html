@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="../img/icons.ico" type="image/x-icon" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="crossorigin"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <style>
+      * {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .card-layanan {
+        border: 2px solid #150050;
+      }
+      .konsultasi .card-konsultasi {
+        border: 2px solid #150050;
+      }
+      .form input {
+        border: 1px solid #150050;
+        padding-left: 12px;
+      }
+      @media only screen and (min-width: 1028px) {
+        .facebook {
+          border: 1px solid #150050;
+        }
+        .google {
+          border: 1px solid #150050;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Daftar -->
+    <section class="daftar flex" id="daftar">
+      <div class="image hidden lg:block">
+        <img src="../img/imagedaftar.png" alt="" class="h-screen" />
+      </div>
+      <div class="form flex flex-col px-[10%] pt-[10%]">
+        <h1 class="heading font-bold text-4xl text-[#150050] mb-12">Daftar</h1>
+        <form
+          action=""
+          class="flex flex-col w-[320px] text-[#150050] sm:w-[500px]"
+        >
+          <!-- nama -->
+          <label for="nama" class="font-semibold text-xl">Nama</label>
+          <input
+            type="text"
+            name="nama"
+            id="nama"
+            class="h-7 mb-4 sm:h-10 sm:text-xl"
+          />
+          <!-- email -->
+          <label for="email" class="font-semibold text-xl">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="h-7 mb-4 sm:h-10 sm:text-xl"
+          />
+          <!-- password -->
+          <label for="password" class="font-semibold text-xl">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="h-7 mb-4 sm:h-10 sm:text-xl"
+          />
+          <!-- check -->
+          <div class="container flex items-center mb-6">
+            <input
+              type="checkbox"
+              name="check"
+              id="check"
+              class="w-[30px] h-[30px] mr-[14px]"
+            />
+            <label
+              for="check"
+              class="text-[13px] sm:w-[360px] sm:font-medium sm:text-base"
+              >Saya telah membaca dan menyetujui Ketentuan Layanan dan Kebijakan
+              Privasi kami
+            </label>
+          </div>
+          <!-- submit -->
+          <button
+            type="submit"
+            class="w-[120px] h-10 sm:w-[160px] sm:text-xl bg-[#150050] text-white text-sm font-bold"
+          >
+            Buat Akun
+          </button>
+        </form>
+        <div class="barrier flex items-center justify-evenly my-5">
+          <span class="w-[120px] h-[2px] bg-[#150050]"></span>
+          <p class="text-[#150050]">atau</p>
+          <span class="w-[120px] h-[2px] bg-[#150050]"></span>
+        </div>
+        <div
+          class="another-login flex text-[30px] justify-evenly lg:justify-between lg:w-[620px]"
+        >
+          <a
+            href="#"
+            class="google w-[72px] h-[72px] bg-[#f4f4f4] shadow-2xl px-5 py-4 rounded flex lg:bg-transparent lg:w-[305px] lg:justify-evenly lg:items-center lg:font-semibold lg:text-[#150050] lg:shadow-lg"
+          >
+            <iconify-icon icon="logos:google-icon"></iconify-icon>
+            <p class="hidden lg:block text-base">Daftar dengan Google</p>
+          </a>
+          <a
+            href="#"
+            class="facebook w-[72px] h-[72px] bg-[#f4f4f4] shadow-2xl px-5 py-4 rounded flex lg:bg-transparent lg:w-[305px] lg:justify-evenly lg:items-center lg:font-semibold lg:text-[#150050] lg:shadow-lg"
+          >
+            <iconify-icon icon="logos:facebook"></iconify-icon>
+            <p class="hidden lg:block text-base">Daftar dengan Facebokk</p>
+          </a>
+        </div>
+        <p class="mt-7 text-lg font-semibold">
+          Sudah punya akun? <a href="#" class="text-[#1400FF]">Login</a>
+        </p>
+      </div>
+    </section>
+    <!-- Akhir Daftar -->
+    <!-- Js -->
+    <script src="../script.js"></script>
+
+    <!-- Icon -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  </body>
+</html>

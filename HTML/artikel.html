@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artikel</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="../img/icons.ico" type="image/x-icon" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="crossorigin"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <style>
+      * {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .other .line {
+        border-left: 4px solid #1400ff;
+        height: 80px;
+      }
+      .form textarea {
+        border: 1px solid #150050;
+      }
+      .nav-desktop .link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0px;
+        height: 2px;
+        background: #fff;
+        transition: ease 1s;
+      }
+      .nav-desktop .link:hover::after {
+        width: 100%;
+      }
+      .nav-mobile {
+        transition: ease 2s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="nav-desktop fixed w-full h-24 bg-[#040613] bg-opacity-50 flex items-center px-4 justify-between md:px-10 lg:px-20 xl:px-24 2xl:px-36 z-50"
+      id="nav"
+    >
+      <a
+        href="#"
+        class="heading font-bold text-2xl text-white md:text-4xl xl:text-4xl"
+        >TechnoHealth</a
+      >
+      <ul class="hidden xl:flex text-white">
+        <li class="mr-12 font-medium text-xl relative">
+          <a href="../index.html#hero" class="link">Beranda</a>
+        </li>
+        <li class="mr-12 font-medium text-xl relative">
+          <a href="/index.html#tentang-kami" class="link">Tentang Kami</a>
+        </li>
+        <li class="mr-12 font-medium text-xl relative">
+          <a href="/index.html#layanan" class="link">Layanan</a>
+        </li>
+        <li class="mr-12 font-medium text-xl">
+          <a class="py-2 px-6 bg-white text-black" href="daftar.html">Daftar</a>
+        </li>
+        <li class="mr-12 font-medium text-xl">
+          <a class="py-2 px-6 border-2" href="#">Masuk</a>
+        </li>
+      </ul>
+      <button class="xl:hidden">
+        <i class="bx bx-menu text-3xl text-white md:text-4xl xl:hidden"></i>
+      </button>
+    </nav>
+    <nav
+      class="nav-mobile -mr-[100%] z-50 right-0 top-[96px] text-center w-screen h-screen shadow-xl bg-[#040613] text-white fixed md:text-lg"
+    >
+      <ul class="block">
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="#hero">Beranda</a>
+        </li>
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="#tentang-kami">Tentang Kami</a>
+        </li>
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="#layanan">Layanan</a>
+        </li>
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="HTML/daftar.html">Daftar</a>
+        </li>
+        <li class="my-6 hover:text-[#1400FF]">
+          <a href="#">Masuk</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Akhir Navbar -->
+    <!-- Links -->
+    <section
+      class="links w-full flex items-center bg-[#040613] px-5 pt-24 pb-3 justify-center md:justify-start md:px-10 md:pb-5"
+      id="links"
+    >
+      <a href="#" class=""><img src="../img/icons.ico" alt="" class="" /></a>
+      <a
+        href="#"
+        class="text-white mx-3 font-semibold md:text-xl md:mx-11 lg:text-2xl"
+        >Covid-19</a
+      >
+      <a
+        href="#"
+        class="text-white mx-3 font-semibold md:text-xl md:mx-11 lg:text-2xl"
+        >TechHealth</a
+      >
+      <a
+        href="#"
+        class="text-white mx-3 font-semibold md:text-xl md:mx-11 lg:text-2xl"
+        >HidupSehat</a
+      >
+    </section>
+    <!-- Akhir Links -->
+    <!-- Artikel -->
+    <article
+      class="artikel w-full px-5 py-20 md:px-10 lg:px-20 xl:px-[10%] 2xl:px-[15%]"
+      id="artikel"
+    >
+      <h1
+        class="heading font-bold text-2xl text-center mb-5 text-[#150050] md:text-5xl md:mb-16 lg:w-[742px] lg:mx-auto"
+      >
+        “Pengomposan” manusia akan dilegalkan di Washington
+      </h1>
+      <img
+        src="../img/gambarartikel.png"
+        alt=""
+        class="mb-5 mx-auto md:mb-16"
+      />
+      <div class="content font-medium text-justify mb-2 md:text-xl">
+        Ketika orang yang Anda cintai meninggal dunia, biasanya ada dua pilihan:
+        dikubur atau dikremasi. Namun ada pilihan lain, 'reduksi organik alami'
+        alias pengomposan manusia seperti yang akan dilegalkan di
+        Washington.Legislatif negara bagian meloloskan RUU tentang hal ini pada
+        19 April, dan sekarang sedang menunggu tanda tangan dari Jay Inslee,
+        gubernur Washington. Jika dia menandatanganinya, Washington akan menjadi
+        negara pertama yang mengizinkan pengomposan manusia, yang akan menjadi
+        legal pada 1 Mei 2020, menurut Associated Press.Teknik yang digunakan
+        akan mempercepat proses pembusukan, mengubah tubuh menjadi tanah dalam
+        waktu 4 hingga 7 minggu.
+      </div>
+      <div class="content font-medium text-justify mb-2 md:text-xl">
+        Praktik ini juga memiliki jejak karbon yang lebih kecil daripada kremasi
+        atau penguburan menurut para pendukung teknik ini.Salah satu pendukung
+        itu adalah Katrina Spade, pendiri Recompose, sebuah perusahaan yang siap
+        membantu mengubah orang menjadi tanah setelah mereka tiada. Menurutnya
+        pengomposan manusia bukan jenis penguburan.
+      </div>
+      <div class="other flex my-9">
+        <span class="line"></span>
+        <div class="text mx-3">
+          <p class="mb-4 mt-1 text-lg font-semibold md:text-xl">Baca juga</p>
+          <a href="" class="text-xl font-semibold text-[#1400FF] md:text-3xl"
+            >Robot pengganti dokter</a
+          >
+        </div>
+      </div>
+      <div class="content font-medium text-justify mb-2 md:text-xl">
+        "Ini adalah bentuk disposisi manusia yang baru muncul, dan ini merupakan
+        alternatif penguburan dan kremasi," ujar Spade kepada Live Science. Ia
+        pun mengungkap alasan mengapa pengomposan manusia sebaiknya menjadi
+        salah satu opsi selain penguburan atau kremasi."Dengan kremasi, Anda
+        memiliki pembakaran bahan bakar fosil dan emisi karbon dan
+        partikel-partikel merkuri ke atmosfer. Dengan penguburan konvensional,
+        ada jejak karbon yang cukup dari pabrik dan pengangkutan peti mati,
+        lapisan kubur, dan juga pemeliharaan kuburan," jelas Spade di acara King
+        5 News, sebuah stasiun berita Washington.
+      </div>
+      <div class="content font-medium text-justify mb-2 md:text-xl">
+        Meski begitu ia menegaskan semua kembali pada pilihan masing-masing
+        orang untuk menggunakan metode yang mana.Setelah tubuh 'dikomposkan'
+        melalui proses ini, produk akhirnya adalah sekitar 0,76 meter kubik
+        tanah, atau sekitar cukup untuk mengisi dua gerobak besar, AP
+        melaporkan. Sama seperti sisa-sisa yang dikremasi, teman dan keluarga
+        dapat memilih untuk menyimpan tanah di guci, mengolahnya kembali di
+        taman, atau menyebarkannya di tanah publik, asalkan mereka mematuhi
+        hukum setempat.RUU yang baru disahkan juga menyetujui penggunaan
+        hidrolisis alkali atau 'kremasi air' yang sudah sah di 19 negara bagian
+        Amerika Serikat lainnya. Dalam proses ini, panas, tekanan, air dan bahan
+        kimia seperti alkali digunakan untuk mereduksi tubuh menjadi fragmen
+        seperti abu yang dikremasi dan dapat disimpan dalam guci atau di tempat
+        lain.
+      </div>
+      <div class="source my-6">
+        <p class="font-bold">
+          Sumber-
+          <a href="#" class="font-normal"
+            >https://health.detik.com/berita-detikhealth/d-4537450/pengomposan-manusia-rencananya-akan-dilegalkan-di-washington</a
+          >
+        </p>
+      </div>
+      <div class="other flex my-9">
+        <span class="line"></span>
+        <div class="text mx-3">
+          <p class="mb-4 mt-1 text-lg font-semibold md:text-xl">Baca juga</p>
+          <a href="" class="text-xl font-semibold text-[#1400FF] md:text-3xl"
+            >Robot pengganti dokter</a
+          >
+        </div>
+      </div>
+      <div class="tag text-xl font-medium my-6">
+        <a href="#" class="mr-9">Washington</a>
+        <a href="#" class="mr-9">Pupuk kompos</a>
+      </div>
+      <div class="form">
+        <form action="" class="flex flex-col">
+          <label
+            for="komen"
+            class="font-semibold text-xl mb-3 lg:text-2xl text-[#150050]"
+            >Komentar</label
+          >
+          <textarea
+            name="komen"
+            id="komen"
+            rows="1"
+            class="w-80 h-20 px-8 py-6 resize-none rounded-md"
+            placeholder="komentar anda"
+          ></textarea>
+        </form>
+      </div>
+    </article>
+    <!-- Akhir Artikel -->
+    <!-- Footer -->
+    <footer
+      class="footer w-full bg-[#040613] text-white flex flex-wrap justify-center py-16 px-5 lg:justify-between lg:px-36"
+      id="footer"
+    >
+      <div class="technohealth w-80 md:py-6 lg:w-80">
+        <img src="../img/Logo.png" alt="" />
+        <p class="text-sm my-7">
+          TechnoHealth adalah website yang dapat membantu anda mengenai masalah
+          kesehatan
+        </p>
+        <div class="sosmed text-[#1400FF] text-2xl">
+          <a href="#" class="mr-3">
+            <iconify-icon icon="ri:instagram-fill"></iconify-icon>
+          </a>
+          <a href="#" class="mr-3">
+            <iconify-icon icon="bi:twitter"></iconify-icon>
+          </a>
+          <a href="#" class="mr-3">
+            <iconify-icon icon="uil:facebook-f"></iconify-icon>
+          </a>
+          <a href="#" class="mr-3">
+            <iconify-icon icon="ion:logo-tiktok"></iconify-icon>
+          </a>
+        </div>
+      </div>
+      <div
+        class="services w-24 py-6 md:w-1/2 md:text-center lg:w-[88px] lg:text-left"
+      >
+        <p class="my-3 font-bold text-[#1400FF] text-lg">Services</p>
+        <ul>
+          <li class="mb-2">
+            <a href="konsultasi.html">Konsultansi</a>
+          </li>
+          <li class="mb-2">
+            <a href="cariobat.html">Cari Obat</a>
+          </li>
+          <li class="mb-2">
+            <a href="maps.html">Maps</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#artikel">Artikel</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Donasi</a>
+          </li>
+        </ul>
+      </div>
+      <div class="links py-6 md:w-1/2 md:text-center lg:w-[128px] lg:text-left">
+        <h1 class="my-3 font-bold text-[#1400FF] text-lg">Usefull Link</h1>
+        <ul>
+          <li class="mb-2">
+            <a href="../index.html#hero">Beranda</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#tentang-kami">Tentang Kami</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#layanan">Layanan</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Kontak</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Kebijakan Privasi</a>
+          </li>
+        </ul>
+      </div>
+      <div class="kontak w-80 py-6">
+        <h1 class="font-bold text-[#1400FF] text-lg my-3">Contact</h1>
+        <p class="opacity-60 text-lg font-medium mb-3">(62) 123 4567 8901</p>
+        <p class="opacity-60 text-lg font-medium mb-10">technoai@gmail.com</p>
+        <input
+          type="text"
+          name="kontak"
+          id="kontak"
+          class="w-[169px] h-10 px-2"
+          placeholder="Isi"
+        />
+        <button type="submit" class="bg-[#3FA0FB] w-16 h-10 text-lg">
+          <iconify-icon icon="material-symbols:arrow-right-alt"></iconify-icon>
+        </button>
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
+    <!-- Js -->
+    <script src="../script.js"></script>
+
+    <!-- Icon -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  </body>
+</html>

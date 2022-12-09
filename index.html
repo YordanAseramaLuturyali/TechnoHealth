@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>TechnoHealth</title>
+        <!-- Logo -->
+        <link rel="shortcut icon" href="img/icons.ico" type="image/x-icon"/>
+
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+            rel="stylesheet"/>
+
+        <!-- Icon -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"/>
+
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+        <!-- CSS -->
+        <style>
+            * {
+                font-family: "Plus Jakarta Sans", sans-serif;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            .card-layanan {
+                border: 2px solid #150050;
+            }
+            .nav-desktop .link::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                width: 0;
+                height: 2px;
+                background: #fff;
+                transition: ease 1s;
+            }
+            .nav-desktop .link:hover::after {
+                width: 100%;
+            }
+            .links .link::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                width: 0;
+                height: 2px;
+                background: #150050;
+                transition: ease 1s;
+            }
+            .links .link:hover::after {
+                width: 100%;
+            }
+            .image img {
+                animation-duration: 4s;
+                animation-name: upAndDown;
+                animation-iteration-count: infinite;
+            }
+            .nav-mobile{
+                transition: ease 2s;
+            }
+            @keyframes upAndDown {
+                0% {
+                    margin-top: 0;
+                }
+                50% {
+                    margin-top: 50px;
+                }
+                100% {
+                    margin-top: 0;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+    <body>
+        <div
+            class="bg-image h-screen bg-center bg-no-repeat bg-cover md:bg-left"
+            style="background-image: url(img/herolandingpage.png)">
+            <!-- Navbar -->
+            <nav
+                class="nav-desktop fixed w-full h-24 bg-black bg-opacity-50 flex items-center px-4 justify-between md:px-10 lg:px-20 xl:px-24 2xl:px-36 z-50 backdrop-blur"
+                id="nav">
+                <a
+                    href="#"
+                    class="heading font-bold text-2xl text-white md:text-4xl xl:text-4xl">TechnoHealth</a >
+                <ul class="hidden xl:flex text-white">
+                    <li class="mr-12 font-medium text-xl relative">
+                        <a href="#hero" class="link">Beranda</a>
+                    </li>
+                    <li class="mr-12 font-medium text-xl relative">
+                        <a href="#tentang-kami" class="link">Tentang Kami</a>
+                    </li>
+                    <li class="mr-12 font-medium text-xl relative">
+                        <a href="#layanan" class="link">Layanan</a>
+                    </li>
+                    <li class="mr-12 font-medium text-xl">
+                        <a class="py-2 px-6 bg-white text-black" href="HTML/daftar.html">Daftar</a>
+                    </li>
+                    <li class="mr-12 font-medium text-xl">
+                        <a class="py-2 px-6 border-2" href="#">Masuk</a>
+                    </li>
+                </ul>
+                <button class="xl:hidden">
+                    <i class="bx bx-menu text-3xl text-white md:text-4xl xl:hidden"></i>
+                </button>
+            </nav>
+            <nav
+                class="nav-mobile -mr-[100%] z-50 right-0 top-[96px] text-center w-full h-screen text-white xl:hidden bg-black bg-opacity-50 fixed backdrop-blur md:text-xl">
+                <ul class="block">
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="#hero">Beranda</a>
+                    </li>
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="#tentang-kami">Tentang Kami</a>
+                    </li>
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="#layanan">Layanan</a>
+                    </li>
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="HTML/daftar.html">Daftar</a>
+                    </li>
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="#">Masuk</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Akhir Navbar -->
+            <!-- Hero -->
+            <section
+                class="hero px-4 flex flex-col justify-center h-full md:px-10 lg:px-20 xl:px-36 "
+                id="hero">
+                <h1
+                    class="heading font-bold text-white text-2xl w-[300px] md:text-5xl md:w-[500px]">
+                    Solusi terbaik untuk kesehatan anda
+                </h1>
+                <p
+                    class="description mt-3 w-[320px] font-medium text-white text-justify sm:text-left md:w-[625px] md:text-2xl">
+                    Konsultasi dengan dokter terpecaya dan berpengalaman, cari rumah sakit, cari
+                    obat, dan berita seputar kesehatan, semua bisa di TechnoHealth.
+                </p>
+                <a
+                    href="#layanan"
+                    class="w-44 rounded-lg bg-white py-2 px-2 text-center text-xs font-semibold mt-4 lg:w-[280px] lg:py-2 lg:text-base">Konsultasi Sekarang</a >
+            </section>
+            <!-- Akhir Hero -->
+        </div>
+        <!-- Tentang Kami -->
+        <section
+            class="tentang-kami w-full h-screen flex items-center px-4 justify-between md:px-10 lg:px-20 xl:px-36"
+            id="tentang-kami"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-bottom">
+            <div class="description">
+                <h1
+                    class="heading font-bold w-[300px] text-2xl text-[#150050] mb-4 lg:text-4xl lg:w-[460px] xl:text-5xl xl:w-[633px] xl:mb-7">
+                    Apa yang bisa kami berikan kepada anda
+                </h1>
+                <p
+                    class="w-[320px] text-[#150050] text-justify font-medium mb-3 text-sm lg:text-xl lg:w-[460px] xl:text-2xl xl:w-[625px] xl:mb-7 lg:text-left">
+                    <span class="font-bold">TechnoHealth</span>
+                    adalah website yang dapat membantu anda mengenai masalah kesehatan. Anda bisa
+                    berkonsultasi dengan dokter berpengalaman melalui video call, chat, maupun
+                    datang ke rumah anda. Anda juga bisa mencari lokasi rumah sakit dan apotek
+                    terdekat dengan anda.
+                </p>
+                <p
+                    class="w-[320px] text-[#150050] text-justify font-medium mb-4 text-sm lg:text-xl lg:w-[460px] xl:text-2xl xl:w-[625px] xl:mb-6">
+                    Untuk mendapatkan update dari kami. Jangan lupa follow kami di
+                </p>
+                <div class="icon-sosmed text-2xl text-[#150050] lg:text-4xl">
+                    <a href="#" class="mr-3">
+                        <iconify-icon icon="ri:instagram-fill"></iconify-icon >
+                    </a>
+                    <a href="#" class="mr-3">
+                        <iconify-icon icon="bi:twitter"></iconify-icon >
+                    </a>
+                    <a href="#" class="mr-3">
+                        <iconify-icon icon="uil:facebook-f"></iconify-icon >
+                    </a>
+                    <a href="#" class="mr-3">
+                        <iconify-icon icon="ion:logo-tiktok"></iconify-icon >
+                    </a>
+                </div>
+            </div>
+            <div class="image hidden md:block">
+                <img src="img/tentangkami.png" alt="" class="md:w-[300px] xl:w-[500px]"/>
+            </div>
+        </section>
+        <!-- Akhir Tentang Kami -->
+        <!-- Layanan -->
+        <section
+            class="layanan w-full justify-between py-24 px-5 md:px-12 lg:px-20 xl:px-36"
+            id="layanan">
+            <h1
+                class="heading font-bold text-[#150050] text-2xl mb-16 md:text-4xl"
+                data-aos="fade-down-right"
+                data-aos-anchor-placement="center-bottom">
+                Layanan
+            </h1>
+            <div class="card flex flex-wrap">
+                <div
+                    class="card-layanan text-[#150050] rounded w-[240px] h-64 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    data-aos-anchor-placement="center-bottom">
+                    <iconify-icon icon="fluent:video-person-call-16-filled" class="text-3xl"></iconify-icon>
+                    <h1 class="heading font-bold my-2 text-2xl">Konsultasi</h1>
+                    <p class="mb-3">
+                        Berkonsultasi dengan dokter melalui video call ataupun memanggil dokter untuk
+                        datang ke rumah.
+                    </p>
+                    <a href="HTML/konsultasi.html" class="font-semibold">Selengkapnya
+                        <span class="font-bold text-lg">></span></a>
+                </div>
+                <div
+                    class="card-layanan text-[#150050] rounded w-[240px] h-64 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    data-aos-anchor-placement="center-bottom">
+                    <iconify-icon icon="mdi:drugs" class="text-3xl"></iconify-icon>
+                    <h1 class="heading my-2 font-bold text-2xl">Cari Obat</h1>
+                    <p class="mb-10">
+                        Merekomendasikan/ mencarikan obat sesuai dengan keluhan anda.
+                    </p>
+                    <a href="HTML/cariobat.html" class="font-semibold">Selengkapnya
+                        <span class="font-bold text-lg">></span></a>
+                </div>
+                <div
+                    class="card-layanan text-[#150050] rounded w-[240px] h-64 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                    data-aos-anchor-placement="center-bottom">
+                    <iconify-icon
+                        icon="material-symbols:add-location-alt-outline-rounded"
+                        class="text-3xl"></iconify-icon>
+                    <h1 class="heading my-2 font-bold text-2xl">Maps</h1>
+                    <p class="mb-10">
+                        Temukan rumah sakit, apotek, test Covid-19 terdekat dengan anda
+                    </p>
+                    <a href="HTML/maps.html" class="font-semibold">Selengkapnya
+                        <span class="font-bold text-lg">></span></a>
+                </div>
+                <div
+                    href="#"
+                    class="card-layanan text-[#150050] rounded w-[240px] h-64 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white"
+                    data-aos="fade-up"
+                    data-aos-delay="400"
+                    data-aos-anchor-placement="center-bottom">
+                    <iconify-icon
+                        icon="material-symbols:add-location-alt-outline-rounded"
+                        class="text-3xl"></iconify-icon>
+                    <h1 class="heading my-2 font-bold text-2xl">Donasi</h1>
+                    <p class="mb-10">
+                        Membantu pengobatan masyarakat yang membutuhkan.
+                    </p>
+                    <a href="HTML/konsultasi.html" class="font-semibold">Selengkapnya
+                        <span class="font-bold text-lg">></span></a>
+                </div>
+            </a>
+        </div>
+    </section>
+    <!-- Akhir Layanan -->
+    <!-- Artikel -->
+    <section
+        class="artikel px-5 flex flex-col py-80 md:px-10 lg:px-20 xl:px-36"
+        id="artikel">
+        <div class="heading-link flex justify-between">
+            <h1 class="heading block font-bold text-[#150050] text-3xl">
+                Artikel
+            </h1>
+            <div
+                class="links md:flex justify-center text-sm font-bold text-[#150050] hidden mb-10 md:mt-2 md:font-medium sm:text-lg">
+                <ul class="flex">
+                    <li class="relative">
+                        <a href="#" class="link mx-3">Covid-19</a>
+                    </li>
+                    <li class="relative">
+                        <a href="#" class="link mx-3">Hidup Sehat</a>
+                    </li>
+                    <li class="relative">
+                        <a href="#" class="link mx-3">TechHealth</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="artikel-artikel flex flex-wrap justify-center">
+            <a
+                href="HTML/artikel.html"
+                class="read relative w-[300px] h-[300px] my-4 xl:w-[300px] xl:h-[400px]">
+                <img
+                    src="img/artikelsatu.png"
+                    alt=""
+                    class="w-[300px] h-[300px] xl:w-[300px] xl:h-[400px]"/>
+                <p class="tanggal absolute top-4 left-9 text-white">11/12/2022</p>
+                <h3 class="judul absolute bottom-14 left-9 w-[240px] font-bold text-white">
+                    “Pengomposan” manusia akan dilegalkan di Washington
+                </h3>
+                <p class="tag absolute left-9 bottom-6 font-medium text-white">
+                    #TecHealth
+                </p>
+            </a>
+            <div class="group flex flex-wrap xl:flex-col justify-center">
+                <a
+                    href="HTML/artikel.html"
+                    class="read relative w-[300px] h-[300px] my-4 md:w-[500px] sm:mx-3 xl:mx-0 xl:w-[500px] xl:h-[200px] xl:my-0">
+                    <img
+                        src="img/articledua.png"
+                        alt=""
+                        class="w-[300px] h-[300px] md:w-[500px] xl:w-[500px] xl:h-[200px]"/>
+                    <p class="tanggal absolute top-4 left-9 text-white">11/12/2022</p>
+                    <h3 class="judul absolute bottom-14 left-9 w-[240px] font-bold text-white">
+                        “Pengomposan” manusia akan dilegalkan di Washington
+                    </h3>
+                    <p class="tag absolute left-9 bottom-6 font-medium text-white">
+                        #TecHealth
+                    </p>
+                </a>
+                <a
+                    href="HTML/artikel.html"
+                    class="read relative w-[300px] h-[300px] my-4 md:w-[500px] xl:w-[500px] xl:h-[200px] xl:my-0">
+                    <img
+                        src="img/articledua.png"
+                        alt=""
+                        class="w-[300px] h-[300px] md:w-[500px] xl:w-[500px] xl:h-[200px]"/>
+                    <p class="tanggal absolute top-4 left-9 text-white">11/12/2022</p>
+                    <h3 class="judul absolute bottom-14 left-9 w-[240px] font-bold text-white">
+                        “Pengomposan” manusia akan dilegalkan di Washington
+                    </h3>
+                    <p class="tag absolute left-9 bottom-6 font-medium text-white">
+                        #TecHealth
+                    </p>
+                </a>
+            </div>
+            <a
+                href="HTML/artikel.html"
+                class="read relative w-[300px] h-[300px] my-4 xl:w-[300px] xl:h-[400px]">
+                <img
+                    src="img/artikelsatu.png"
+                    alt=""
+                    class="w-[300px] h-[300px] xl:w-[300px] xl:h-[400px]"/>
+                <p class="tanggal absolute top-4 left-9 text-white">11/12/2022</p>
+                <h3 class="judul absolute bottom-14 left-9 w-[240px] font-bold text-white">
+                    “Pengomposan” manusia akan dilegalkan di Washington
+                </h3>
+                <p class="tag absolute left-9 bottom-6 font-medium text-white">
+                    #TecHealth
+                </p>
+            </a>
+        </div>
+    </section>
+    <!-- Akhir Artikel -->
+    <!-- Testimoni -->
+    <section class="testimoni px-5 pb-80 md:px-10 lg:px-20 xl:px-36" id="testimoni">
+        <h1 class="heading font-bold text-2xl text-[#150050] mb-16 md:text-4xl">
+            Apa kata mereka
+        </h1>
+        <div class="card flex flex-wrap justify-center lg:justify-between">
+            <div
+                class="card-testimoni w-80 h-52 bg-[#f4f4f4] py-4 px-6 rounded-lg shadow-lg cursor-pointer hover:bg-[#150050] hover:text-white my-6 md:w-[550px] lg:w-[408px] lg:h-[201px]">
+                <iconify-icon icon="bxs:quote-left" class="text-4xl mb-4"></iconify-icon>
+                <p class="mb-2">
+                    Saat saya berkonsultasi, pelayanannya sangat ramah dan dokternyapun sangat
+                    berpengalaman...
+                </p>
+                <p class="">-Ferdyan</p>
+            </div>
+            <div
+                class="card-testimoni w-80 h-52 bg-[#f4f4f4] py-4 px-6 rounded-lg shadow-lg cursor-pointer hover:bg-[#150050] hover:text-white my-6 md:w-[550px] lg:w-[408px] lg:h-[201px]">
+                <iconify-icon icon="bxs:quote-left" class="text-4xl mb-4"></iconify-icon>
+                <p class="mb-2">
+                    Saat saya berkonsultasi, pelayanannya sangat ramah dan dokternyapun sangat
+                    berpengalaman...
+                </p>
+                <p class="">-Ferdyan</p>
+            </div>
+            <div
+                class="card-testimoni w-80 h-52 bg-[#f4f4f4] py-4 px-6 rounded-lg shadow-lg cursor-pointer hover:bg-[#150050] hover:text-white my-6 md:w-[550px] lg:w-[408px] lg:h-[201px]">
+                <iconify-icon icon="bxs:quote-left" class="text-4xl mb-4"></iconify-icon>
+                <p class="mb-2">
+                    Saat saya berkonsultasi, pelayanannya sangat ramah dan dokternyapun sangat
+                    berpengalaman...
+                </p>
+                <p class="">-Ferdyan</p>
+            </div>
+        </div>
+    </section>
+    <!-- Akhir Testimoni -->
+    <!-- Footer -->
+    <footer
+        class="footer w-full bg-[#040613] text-white flex flex-wrap justify-center py-16 px-5 lg:justify-between lg:px-36"
+        id="footer">
+        <div class="technohealth w-80 md:py-6 lg:w-80">
+            <img src="img/Logo.png" alt=""/>
+            <p class="text-sm my-7">
+                Mengatasi masalah kesehatanmu dimanapun dan kapanpun.
+            </p>
+            <div class="sosmed text-[#1400FF] text-2xl">
+                <a href="#" class="mr-3">
+                    <iconify-icon icon="ri:instagram-fill"></iconify-icon >
+                </a>
+                <a href="#" class="mr-3">
+                    <iconify-icon icon="bi:twitter"></iconify-icon >
+                </a>
+                <a href="#" class="mr-3">
+                    <iconify-icon icon="uil:facebook-f"></iconify-icon >
+                </a>
+                <a href="#" class="mr-3">
+                    <iconify-icon icon="ion:logo-tiktok"></iconify-icon >
+                </a>
+            </div>
+        </div>
+        <div
+            class="services w-24 py-6 md:w-1/2 md:text-center lg:w-[88px] lg:text-left">
+            <p class="my-3 font-bold text-[#1400FF] text-lg">Services</p>
+            <ul class="text-medium text-base">
+                <li class="mb-2">
+                    <a href="HTML/konsultasi.html">Konsultasi</a>
+                </li>
+                <li class="mb-2">
+                    <a href="HTML/cariobat.html">Cari Obat</a>
+                </li>
+                <li class="mb-2">
+                    <a href="HTML/maps.html">Maps</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#artikel">Artikel</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#">Donasi</a>
+                </li>
+            </ul>
+        </div>
+        <div class="links py-6 md:w-1/2 md:text-center lg:w-[128px] lg:text-left">
+            <h1 class="my-3 font-bold text-[#1400FF] text-lg">Usefull Link</h1>
+            <ul>
+                <li class="mb-2">
+                    <a href="#hero">Beranda</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#tentang-kami">Tentang Kami</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#layanan">Layanan</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#">Kontak</a>
+                </li>
+                <li class="mb-2">
+                    <a href="#">Kebijakan Privasi</a>
+                </li>
+            </ul>
+        </div>
+        <div class="kontak w-80 py-6">
+            <h1 class="font-bold text-[#1400FF] text-lg my-3">Contact</h1>
+            <p class="opacity-60 text-lg font-medium mb-3">(62) 123 4567 8901</p>
+            <p class="opacity-60 text-lg font-medium mb-10">technoai@gmail.com</p>
+            <input
+                type="text"
+                name="kontak"
+                id="kontak"
+                class="w-[169px] h-10 px-2"
+                placeholder="Isi"/>
+            <button type="submit" class="bg-[#3FA0FB] w-16 h-10 text-lg">
+                <iconify-icon icon="material-symbols:arrow-right-alt"></iconify-icon>
+            </button>
+        </div>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <!-- Js -->
+    <script src="script.js"></script>
+
+    <!-- Icon -->
+    <script
+        src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

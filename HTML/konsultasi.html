@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Konsultasi</title>
+        <!-- Logo -->
+        <link rel="shortcut icon" href="../img/icons.ico" type="image/x-icon"/>
+
+        <!-- Tailwind -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+            rel="stylesheet"/>
+
+        <!-- Icon -->
+        <link
+            href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+            rel="stylesheet"/>
+
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+        <!-- CSS -->
+        <style>
+            * {
+                font-family: "Plus Jakarta Sans", sans-serif;
+                box-sizing: border-box;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            .card-layanan {
+                border: 2px solid #150050;
+            }
+            .konsultasi .card-konsultasi {
+                border: 2px solid #150050;
+            }
+            .nav-desktop .link::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                width: 0;
+                height: 2px;
+                background: #fff;
+                transition: ease 1s;
+            }
+            .nav-desktop .link:hover::after {
+                width: 100%;
+            }
+            .nav-mobile{
+                transition: ease 2s;
+            }
+        </style>
+    </head>
+    <body>
+        <div
+            class="bg-image h-screen bg-center bg-no-repeat bg-cover md:bg-left"
+            style="background-image: url(../img/herokonsultasi.png)">
+            <!-- Navbar -->
+            <nav
+                class="nav-desktop fixed w-full h-24 bg-black bg-opacity-50 flex items-center px-4 justify-between md:px-10 lg:px-20 xl:px-24 2xl:px-36 z-50 backdrop-blur"
+                id="nav">
+                <a
+                    href="#"
+                    class="heading font-bold text-2xl text-white md:text-4xl xl:text-4xl">TechnoHealth</a >
+                <ul class="hidden xl:flex text-white">
+                    <li class="mr-12 font-medium text-xl relative">
+                        <a href="../index.html#hero" class="link">Beranda</a>
+                    </li>
+                    <li class="mr-12 font-medium text-xl relative">
+                        <a href="../index.html#tentang-kami" class="link">Tentang Kami</a>
+                    </li>
+                    <li class="mr-12 font-medium text-xl relative">
+                        <a href="../index.html#layanan" class="link">Layanan</a>
+                    </li>
+                    <li class="mr-12 font-medium text-xl">
+                        <a class="py-2 px-6 bg-white text-black" href="daftar.html">Daftar</a>
+                    </li>
+                    <li class="mr-12 font-medium text-xl">
+                        <a class="py-2 px-6 border-2" href="#">Masuk</a>
+                    </li>
+                </ul>
+                <button class="xl:hidden">
+                    <i class="bx bx-menu text-3xl text-white md:text-4xl xl:hidden"></i>
+                </button>
+            </nav>
+            <nav
+                class="nav-mobile -mr-[100%] z-50 right-0 top-[96px] text-center w-screen h-screen shadow-xl text-white xl:hidden bg-black bg-opacity-50 fixed backdrop-blur md:text-xl">
+                <ul class="block">
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="../index.html#hero">Beranda</a>
+                    </li>
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="../index.html#tentang-kami">Tentang Kami</a>
+                    </li>
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="../index.html#layanan">Layanan</a>
+                    </li>
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="daftar.html">Daftar</a>
+                    </li>
+                    <li class="my-6 hover:text-[#1400FF]">
+                        <a href="#">Masuk</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Akhir Navbar -->
+            <!-- Hero -->
+            <section
+                class="hero px-4 flex flex-col justify-center h-full md:px-10 lg:px-20 xl:px-36"
+                id="hero">
+                <h1
+                    class="heading font-bold text-white text-2xl w-[300px] md:text-5xl md:w-[700px] lg:w-[950px]">
+                    Konsultasikan permasalahan kesehatanmu
+                </h1>
+                <p
+                    class="description mt-3 w-[320px] font-medium text-white text-justify md:w-[625px] md:text-2xl">
+                    Konsultasi kesehatannmu dengan dokter terpecaya dan berpengalaman dimanapun dan
+                    kapanpun.
+                </p>
+                <a
+                    href="#konsultasi"
+                    class="w-44 rounded-lg bg-white py-2 px-2 text-center text-xs font-semibold mt-4 lg:w-[280px] lg:py-2 lg:text-base">Konsultasi Sekarang</a >
+            </section>
+            <!-- Akhir Hero -->
+        </div>
+        <!-- Konsultasi -->
+        <section
+            class="konsultasi w-full px-5 py-32 md:px-10 lg:px-20 xl:px-36"
+            id="konsultasi">
+            <div
+                class="text"
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-anchor-placement="center-bottom">
+                <h1 class="heading text-2xl font-bold text-[#150050] md:text-5xl">
+                    Pilih metode konsultasi
+                </h1>
+                <p
+                    class="description text-sm font-medium my-4 text-[#150050] md:text-lg md:w-[606px] md:font-semibold">
+                    Pilih metode konsultasi yang anda inginkan. Bisa melalui video call atau
+                    mendatangkan dokter ke rumah anda dengan dokter yang berpengalaman.
+                </p>
+            </div>
+            <div class="card flex flex-wrap">
+                <a
+                    href="pilihdokterVC.html"
+                    class="card-layanan text-[#150050] rounded w-60 h-56 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white shadow-lg"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                    data-aos-anchor-placement="center-bottom">
+                    <iconify-icon icon="wpf:videocall" class="text-4xl"></iconify-icon>
+                    <h1 class="heading font-bold text-2xl">Konsultasi</h1>
+                    <p>
+                        Berkonsultasi dengan dokter melalui video call ataupun memanggil dokter untuk
+                        datang ke rumah.
+                    </p>
+                </a>
+                <a
+                    href="pilihdokterdatang.html"
+                    class="card-layanan text-[#150050] rounded w-60 h-56 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white shadow-lg"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                    data-aos-anchor-placement="center-bottom">
+                    <iconify-icon icon="material-symbols:home-rounded" class="text-4xl"></iconify-icon>
+                    <h1 class="heading my-2 font-bold text-2xl">Panggil dokter</h1>
+                    <p class="">
+                        Pingin berkonsultasi secara langsung? tapi mager keluar rumah? panggil dokter
+                        aja.
+                    </p>
+                </a>
+                <a
+                    href="#"
+                    class="card-layanan text-[#150050] rounded w-60 h-56 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white shadow-lg"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                    data-aos-anchor-placement="center-bottom">
+                    <iconify-icon icon="material-symbols:home-rounded" class="text-4xl"></iconify-icon>
+                    <h1 class="heading my-2 font-bold text-2xl">Panggil perawat</h1>
+                    <p class="">
+                        Selalu siap untuk merawat kesehatan keluarga anda.
+                    </p>
+                </a>
+            </section>
+            <!-- Akhir Konsultasi -->
+            <!-- Footer -->
+            <footer
+                class="footer w-full bg-[#040613] text-white flex flex-wrap justify-center py-16 px-5 lg:justify-between lg:px-36"
+                id="footer">
+                <div class="technohealth w-80 md:py-6 lg:w-80">
+                    <img src="../img/Logo.png" alt=""/>
+                    <p class="text-sm my-7">
+                        TechnoHealth adalah website yang dapat membantu anda mengenai masalah kesehatan
+                    </p>
+                    <div class="sosmed text-[#1400FF] text-2xl">
+                        <a href="#" class="mr-3">
+                            <iconify-icon icon="ri:instagram-fill"></iconify-icon >
+                        </a>
+                        <a href="#" class="mr-3">
+                            <iconify-icon icon="bi:twitter"></iconify-icon >
+                        </a>
+                        <a href="#" class="mr-3">
+                            <iconify-icon icon="uil:facebook-f"></iconify-icon >
+                        </a>
+                        <a href="#" class="mr-3">
+                            <iconify-icon icon="ion:logo-tiktok"></iconify-icon >
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="services w-24 py-6 md:w-1/2 md:text-center lg:w-[88px] lg:text-left">
+                    <p class="my-3 font-bold text-[#1400FF] text-lg">Services</p>
+                    <ul>
+                        <li class="mb-2">
+                            <a href="konsultasi.html">Konsultansi</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="cariobat.html">Cari Obat</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="maps.html">Maps</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../index.html#artikel">Artikel</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#">Donasi</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="links py-6 md:w-1/2 md:text-center lg:w-[128px] lg:text-left">
+                    <h1 class="my-3 font-bold text-[#1400FF] text-lg">Usefull Link</h1>
+                    <ul>
+                        <li class="mb-2">
+                            <a href="../index.html#hero">Beranda</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../index.html#tentang-kami">Tentang Kami</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="../index.html#layanan">Layanan</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#">Kontak</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#">Kebijakan Privasi</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="kontak w-80 py-6">
+                    <h1 class="font-bold text-[#1400FF] text-lg my-3">Contact</h1>
+                    <p class="opacity-60 text-lg font-medium mb-3">(62) 123 4567 8901</p>
+                    <p class="opacity-60 text-lg font-medium mb-10">technoai@gmail.com</p>
+                    <input
+                        type="text"
+                        name="kontak"
+                        id="kontak"
+                        class="w-[169px] h-10 px-2"
+                        placeholder="Isi"/>
+                    <button type="submit" class="bg-[#3FA0FB] w-16 h-10 text-lg">
+                        <iconify-icon icon="material-symbols:arrow-right-alt"></iconify-icon>
+                    </button>
+                </div>
+            </footer>
+            <!-- Akhir Footer -->
+
+            <!-- Js -->
+            <script src="../script.js"></script>
+
+            <!-- Icon -->
+            <script
+                src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+
+            <!-- AOS -->
+            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <script>
+                AOS.init();
+            </script>
+        </body>
+    </html>

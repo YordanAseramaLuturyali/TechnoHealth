@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maps</title>
+    <!-- Logo -->
+    <link rel="shortcut icon" href="../img/icons.ico" type="image/x-icon" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="crossorigin"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+
+    <!-- CSS -->
+    <style>
+      * {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .card-layanan {
+        border: 2px solid #150050;
+      }
+      .konsultasi .card-konsultasi {
+        border: 2px solid #150050;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Maps -->
+    <div id="map" style="width: 100%; height: 70vh"></div>
+    <!-- Akhir Maps -->
+    <!-- Footer -->
+    <footer
+      class="footer w-full bg-[#040613] text-white flex flex-wrap justify-center py-16 px-5 lg:justify-between lg:px-36"
+      id="footer"
+    >
+      <div class="technohealth w-80 md:py-6 lg:w-80">
+        <img src="../img/Logo.png" alt="" />
+        <p class="text-sm my-7">
+          TechnoHealth adalah website yang dapat membantu anda mengenai masalah
+          kesehatan
+        </p>
+        <div class="sosmed text-[#1400FF] text-2xl">
+          <a href="#" class="mr-3"
+            ><iconify-icon icon="ri:instagram-fill"></iconify-icon
+          ></a>
+          <a href="#" class="mr-3"
+            ><iconify-icon icon="bi:twitter"></iconify-icon
+          ></a>
+          <a href="#" class="mr-3"
+            ><iconify-icon icon="uil:facebook-f"></iconify-icon
+          ></a>
+          <a href="#" class="mr-3"
+            ><iconify-icon icon="ion:logo-tiktok"></iconify-icon
+          ></a>
+        </div>
+      </div>
+      <div
+        class="services w-24 py-6 md:w-1/2 md:text-center lg:w-[88px] lg:text-left"
+      >
+        <p class="my-3 font-bold text-[#1400FF] text-lg">Services</p>
+        <ul>
+          <li class="mb-2">
+            <a href="konsultasi.html">Konsultansi</a>
+          </li>
+          <li class="mb-2">
+            <a href="cariobat.html">Cari Obat</a>
+          </li>
+          <li class="mb-2">
+            <a href="maps.html">Maps</a>
+          </li>
+          <li class="mb-2">
+            <a href="../index.html#artikel">Artikel</a>
+          </li>
+          <li class="mb-2">
+            <a href="#">Donasi</a>
+          </li>
+        </ul>
+      </div>
+      <div class="links py-6 md:w-1/2 md:text-center lg:w-[128px] lg:text-left">
+        <h1 class="my-3 font-bold text-[#1400FF] text-lg">Usefull Link</h1>
+        <ul>
+          <li class="mb-2"><a href="../index.html#hero">Beranda</a></li>
+          <li class="mb-2">
+            <a href="../index.html#tentang-kami">Tentang Kami</a>
+          </li>
+          <li class="mb-2"><a href="../index.html#layanan">Layanan</a></li>
+          <li class="mb-2"><a href="#">Kontak</a></li>
+          <li class="mb-2"><a href="#">Kebijakan Privasi</a></li>
+        </ul>
+      </div>
+      <div class="kontak w-80 py-6">
+        <h1 class="font-bold text-[#1400FF] text-lg my-3">Contact</h1>
+        <p class="opacity-60 text-lg font-medium mb-3">(62) 123 4567 8901</p>
+        <p class="opacity-60 text-lg font-medium mb-10">technoai@gmail.com</p>
+        <input
+          type="text"
+          name="kontak"
+          id="kontak"
+          class="w-[169px] h-10 px-2"
+          placeholder="Isi"
+        />
+        <button type="submit" class="bg-[#3FA0FB] w-16 h-10 text-lg">
+          <iconify-icon icon="material-symbols:arrow-right-alt"></iconify-icon>
+        </button>
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <script>
+      const map = L.map("map").setView([-6.966667, 110.416664], 13);
+
+      const tiles = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+          maxZoom: 19,
+          attribution:
+            '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        }
+      ).addTo(map);
+
+      const iconRumahSakit = L.icon({
+        iconUrl: "../img/rumahsakit.png",
+
+        iconSize: [22, 40],
+      });
+      const iconApotik = L.icon({
+        iconUrl: "../img/apotik.png",
+
+        iconSize: [22, 40],
+      });
+      const iconTesCovid = L.icon({
+        iconUrl: "../img/tescovid.png",
+
+        iconSize: [22, 40],
+      });
+
+      // Rumah Sakit
+      const rsPantiwilasa = L.marker([-6.972969631428621, 110.43439662304124], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>RS Panti Wilasa Dr Cipto </b><br />Jalan Dokter Cipto No.50, Bugangan, Kec. Semarang Tim., Kota Semarang, Jawa Tengah 50123."
+        )
+        .openPopup();
+
+      const rsRoemani = L.marker([-7.0010079042111215, 110.42789696874705], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>Rumah Sakit Roemani Muhammadiyah</b><br />Jl. Wonodri Baru Raya No.22, Wonodri, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50242"
+        )
+        .openPopup();
+
+      const rsBhayangkara = L.marker([-7.000216604067216, 110.44661549758185], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>Rumah Sakit Bhayangkara Semarang</b><br />Jl. Majapahit No.140, Gayamsari, Kec. Gayamsari, Kota Semarang, Jawa Tengah 50248"
+        )
+        .openPopup();
+
+      const rsKariadi = L.marker([-6.9948104006855, 110.40789301493135], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>Rumah Sakit Umum Pusat Dr. Kariadi Semarang</b><br />Jl. Majapahit No.140, Gayamsari, Kec. Gayamsari, Kota Semarang, Jawa Tengah 50248"
+        )
+        .openPopup();
+
+      const rsSultanAgung = L.marker([-6.955761123164773, 110.46161191382187], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>RS Islam Sultan Agung Semarang</b><br />Jl. Kaligawe Raya No.KM. 4, Terboyo Kulon, Kec. Genuk, Kota Semarang, Jawa Tengah 50112"
+        )
+        .openPopup();
+
+      const rsSakti = L.marker([-6.986932271183702, 110.40789132320542], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>Rumah Sakit Bhakti Wira Tamtama</b><br />Jl. DR. Sutomo No.17, Barusari, Kec. Semarang Sel., Kota Semarang, Jawa Tengah 50245"
+        )
+        .openPopup();
+
+      const rsaAdhyatma = L.marker([-6.984491150427001, 110.35587895340768], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>RSUD Dr. Adhyatma, MPH Tugurejo (RSUD Jawa Tengah)</b><br />Jl. Walisongo KM 8,5 No.137, Tambakaji, Kec. Ngaliyan, Kota Semarang, Jawa Tengah 50185"
+        )
+        .openPopup();
+
+      const rsElisabeth = L.marker([-7.0079432709930085, 110.41934487755266], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>Rumah Sakit St. Elisabeth</b><br />Jl. Kawi Raya No.1, Tegalsari, Kec. Candisari, Kota Semarang, Jawa Tengah 50614"
+        )
+        .openPopup();
+
+      const rsKRMT = L.marker([-7.033751721225384, 110.46603047797505], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>Rumah Sakit Umum Daerah KRMT Wongsonegoro</b><br />Jl. Fatmawati No.1, Mangunharjo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272"
+        )
+        .openPopup();
+
+      const rsTelogoRejo = L.marker([-6.987738654449886, 110.4266918122266], {
+        icon: iconRumahSakit,
+      })
+        .addTo(map)
+        .bindPopup(
+          "<b>Rumah Sakit Telogorejo Semarang</b><br />Jl. Kh Ahmad Dahlan, Karangkidul, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50134"
+        )
+        .openPopup();
+
+      function onMapClick(e) {
+        popup
+          .setLatLng(e.latlng)
+          .setContent(`You clicked the map at ${e.latlng.toString()}`)
+          .openOn(map);
+      }
+
+      map.on("click", onMapClick);
+    </script>
+
+    <!-- Js -->
+    <script src="../script.js"></script>
+
+    <!-- Icon -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+  </body>
+</html>
