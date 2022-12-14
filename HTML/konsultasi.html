@@ -57,7 +57,7 @@
             .nav-desktop .link:hover::after {
                 width: 100%;
             }
-            .nav-mobile{
+            .nav-mobile {
                 transition: ease 2s;
             }
         </style>
@@ -120,17 +120,17 @@
                 class="hero px-4 flex flex-col justify-center h-full md:px-10 lg:px-20 xl:px-36"
                 id="hero">
                 <h1
-                    class="heading font-bold text-white text-2xl w-[300px] md:text-5xl md:w-[700px] lg:w-[950px]">
+                    class="heading font-bold text-white text-2xl w-[300px] md:text-5xl md:w-[700px] lg:w-[950px] xl:w-[1000px] xl:text-7xl">
                     Konsultasikan permasalahan kesehatanmu
                 </h1>
                 <p
-                    class="description mt-3 w-[320px] font-medium text-white text-justify md:w-[625px] md:text-2xl">
+                    class="description mt-[28px] w-[320px] font-medium text-white text-justify md:w-[625px] md:text-2xl">
                     Konsultasi kesehatannmu dengan dokter terpecaya dan berpengalaman dimanapun dan
                     kapanpun.
                 </p>
                 <a
                     href="#konsultasi"
-                    class="w-44 rounded-lg bg-white py-2 px-2 text-center text-xs font-semibold mt-4 lg:w-[280px] lg:py-2 lg:text-base">Konsultasi Sekarang</a >
+                    class="w-44 rounded-lg bg-white py-2 px-2 text-center text-xs font-semibold mt-[28px] lg:w-[280px] lg:py-2 lg:text-base">Konsultasi Sekarang</a >
             </section>
             <!-- Akhir Hero -->
         </div>
@@ -147,50 +147,53 @@
                     Pilih metode konsultasi
                 </h1>
                 <p
-                    class="description text-sm font-medium my-4 text-[#150050] md:text-lg md:w-[606px] md:font-semibold">
+                    class="description text-sm font-medium mt-4 mb-11  text-[#150050] md:text-lg md:w-[606px] md:font-semibold">
                     Pilih metode konsultasi yang anda inginkan. Bisa melalui video call atau
                     mendatangkan dokter ke rumah anda dengan dokter yang berpengalaman.
                 </p>
             </div>
             <div class="card flex flex-wrap">
-                <a
-                    href="pilihdokterVC.html"
-                    class="card-layanan text-[#150050] rounded w-60 h-56 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white shadow-lg"
+                <div
+                    class="card-layanan text-[#150050] rounded w-[240px] h-64 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white shadow-lg"
                     data-aos="fade-up"
                     data-aos-delay="100"
                     data-aos-anchor-placement="center-bottom">
                     <iconify-icon icon="wpf:videocall" class="text-4xl"></iconify-icon>
                     <h1 class="heading font-bold text-2xl">Konsultasi</h1>
-                    <p>
+                    <p class="mb-8">
                         Berkonsultasi dengan dokter melalui video call ataupun memanggil dokter untuk
                         datang ke rumah.
                     </p>
-                </a>
-                <a
-                    href="pilihdokterdatang.html"
-                    class="card-layanan text-[#150050] rounded w-60 h-56 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white shadow-lg"
+                    <a href="pilihdokterVC.html" class="font-semibold">Selengkapnya
+                        <span class="font-bold text-lg">></span></a>
+                </div>
+                <div
+                    class="card-layanan text-[#150050] rounded w-[240px] h-64 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white shadow-lg"
                     data-aos="fade-up"
                     data-aos-delay="200"
                     data-aos-anchor-placement="center-bottom">
                     <iconify-icon icon="material-symbols:home-rounded" class="text-4xl"></iconify-icon>
                     <h1 class="heading my-2 font-bold text-2xl">Panggil dokter</h1>
-                    <p class="">
+                    <p class="mb-11">
                         Pingin berkonsultasi secara langsung? tapi mager keluar rumah? panggil dokter
                         aja.
                     </p>
-                </a>
-                <a
-                    href="#"
-                    class="card-layanan text-[#150050] rounded w-60 h-56 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white shadow-lg"
+                    <a href="pilihdokterdatang.html" class="font-semibold">Selengkapnya
+                        <span class="font-bold text-lg">></span></a>
+                </div>
+                <div
+                    class="card-layanan text-[#150050] rounded w-[240px] h-64 p-3 mx-auto my-5 hover:bg-[#150050] hover:text-white shadow-lg"
                     data-aos="fade-up"
                     data-aos-delay="300"
                     data-aos-anchor-placement="center-bottom">
                     <iconify-icon icon="material-symbols:home-rounded" class="text-4xl"></iconify-icon>
                     <h1 class="heading my-2 font-bold text-2xl">Panggil perawat</h1>
-                    <p class="">
+                    <p class="mb-16">
                         Selalu siap untuk merawat kesehatan keluarga anda.
                     </p>
-                </a>
+                    <a href="#" class="font-semibold">Selengkapnya
+                        <span class="font-bold text-lg">></span></a>
+                </div>
             </section>
             <!-- Akhir Konsultasi -->
             <!-- Footer -->
@@ -199,7 +202,7 @@
                 id="footer">
                 <div class="technohealth w-80 md:py-6 lg:w-80">
                     <img src="../img/Logo.png" alt=""/>
-                    <p class="text-sm my-7">
+                    <p class="text-lg my-7">
                         TechnoHealth adalah website yang dapat membantu anda mengenai masalah kesehatan
                     </p>
                     <div class="sosmed text-[#1400FF] text-2xl">
