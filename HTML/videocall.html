@@ -50,7 +50,10 @@
   </head>
   <body>
     <!-- Video Call -->
-    <section class="video-call px-6 py-5 2xl:py-28 w-full" id="video-call">
+    <section
+      class="video-call px-6 py-5 2xl:py-28 w-full relative"
+      id="video-call"
+    >
       <div
         class="heading flex items-center text-white mb-6 md:px-10 2xl:px-[12%]"
       >
@@ -90,7 +93,7 @@
                 <iconify-icon icon="mdi:pin-outline"></iconify-icon>
               </div>
               <div class="client absolute bottom-4 right-4 rounded">
-                <video autoplay="true" id="video-webcam" class="w-44">
+                <video autoplay="true" id="video-webcam" class="md:w-44 w-40">
                   Nyalakan kameranya yaaa
                 </video>
               </div>
@@ -137,7 +140,7 @@
         </div>
         <div class="button text-white text-2xl flex justify-center py-8">
           <a
-            href="#"
+            href="konsultasi.html"
             class="call bg-[#FF0000] w-10 h-10 text-center py-[4px] rounded-full mr-3 xl:w-16 xl:h-16 xl:py-[10px]"
           >
             <iconify-icon
@@ -166,6 +169,7 @@
           <a
             href="#"
             class="message w-10 h-10 text-center py-[5px] rounded-full bg-white text-[#150050] mr-3 md:hidden xl:py-[10px]"
+            id="chat"
           >
             <iconify-icon
               icon="ic:outline-message"
@@ -182,11 +186,57 @@
             ></iconify-icon>
           </a>
         </div>
+        <div
+          class="chat-mobile text-black md:block bg-white w-[300px] h-[500px] rounded-lg p-7 absolute top-[11%] hidden lg:hidden"
+        >
+          <h1 class="font-bold text-2xl heading-chat mb-9">Chat</h1>
+          <div class="chat-dokter">
+            <h3 class="name text-base mb-2 font-medium">Luna</h3>
+            <p
+              class="message bg-[#1400FF] text-white w-[120px] px-4 py-3 rounded-r-xl rounded-br-xlrounded-r-xl rounded-bl-xl font-semibold"
+            >
+              hai..ferdyan
+            </p>
+          </div>
+          <div class="chat-client flex flex-col items-end">
+            <h3 class="name text-base mb-2 font-medium">Ferdyan</h3>
+            <p
+              class="message bg-[#CDCDD0] text-[#150050] w-[120px] px-4 py-3 rounded-b-xl rounded-l-xl rounded-tl-xl font-semibold"
+            >
+              halo.. dok
+            </p>
+          </div>
+          <div class="form-message absolute bottom-3 pb-3">
+            <form action="" class="flex items-center">
+              <textarea
+                name="message"
+                id="message"
+                rows="1"
+                placeholder="Kirim Pesan"
+                class="w-[180px] resize-none px-4 text-white py-3 bg-[#1400FF] rounded-3xl outline-none xl:w-[220px] 2xl:w-[300px]"
+              ></textarea>
+              <button
+                type="submit"
+                class="mx-4 bg-[#1400FF] text-white text-xl p-3 rounded-[50%]"
+              >
+                <iconify-icon icon="ion:paper-plane-outline"></iconify-icon>
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Akhir Video Call -->
     <!-- Js -->
     <script src="script.js"></script>
+    <script>
+      const button = document.getElementById("chat");
+      const chat = document.getElementsByClassName("chat-mobile")[0];
+
+      button.addEventListener("click", function () {
+        chat.classList.toggle("hidden");
+      });
+    </script>
 
     <!-- Icon -->
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
