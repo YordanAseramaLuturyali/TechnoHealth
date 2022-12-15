@@ -85,7 +85,19 @@
                   class="text-[#FF0000]"
                 ></iconify-icon>
                 <h1 class="text-[#040613] font-bold text-sm">Live</h1>
-                <p class="text-[#040613] font-semibold text-sm">0:30:12</p>
+                <div class="waktu flex items-center">
+                  <p
+                    class="menit mr-2 text-[#040613] font-semibold text-sm"
+                    id="menit"
+                  ></p>
+                  <p class="tanda mr-2 text-[#040613] font-semibold text-sm">
+                    :
+                  </p>
+                  <p
+                    class="detik mr-2 text-[#040613] font-semibold text-sm"
+                    id="detik"
+                  ></p>
+                </div>
               </div>
               <div
                 class="pin absolute top-5 right-5 cursor-pointer text-xl text-[#150050]"
@@ -267,6 +279,15 @@
 
       function videoError(e) {
         alert("Izinkan menggunakan camera untuk konsultasi dengan dokter");
+      }
+
+      window.setTimeout("waktu()", 1000);
+
+      function waktu() {
+        var waktu = new Date();
+        setTimeout("waktu()", 1000);
+        document.getElementById("menit").innerHTML = waktu.getMinutes();
+        document.getElementById("detik").innerHTML = waktu.getSeconds();
       }
     </script>
   </body>
